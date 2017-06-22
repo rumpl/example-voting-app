@@ -8,6 +8,8 @@ WORKDIR /app
 ADD requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
+# add curl to image
+RUN apk add --update curl
 # Copy our code from the current folder to /app inside the container
 ADD . /app
 
