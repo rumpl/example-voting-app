@@ -14,11 +14,6 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
-# add curl to image
-RUN apk add --update curl
-# Copy our code from the current folder to /app inside the container
-COPY . .
-
 # Make port 80 available for links and/or publish
 EXPOSE 80
 
