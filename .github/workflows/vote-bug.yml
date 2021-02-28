@@ -6,13 +6,13 @@ on:
       - 'vote-bug'
     paths:
       - 'vote/**'
-      - '.github/workflows/vote.yml'
+      - '.github/workflows/vote-bug.yml'
   pull_request:
     branches:
       - 'vote-bug'
     paths:
       - 'vote/**'
-      - '.github/workflows/vote.yml'
+      - '.github/workflows/vote-bug.yml'
  
 
 jobs:
