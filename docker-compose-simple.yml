@@ -18,10 +18,13 @@ services:
 
   db:
     image: postgres:9.4
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
 
   result:
     build: ./result
-    command: nodemon --debug server.js
+    command: nodemon server.js
     volumes:
       - ./result:/app
     ports:
