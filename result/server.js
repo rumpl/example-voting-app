@@ -42,6 +42,10 @@ io.sockets.on('connection', function (socket) {
   });
 });
 
+var pool = new pg.Pool({
+  connectionString: 'postgres://postgres:postgres@db/postgres'
+});
+
 async.retry(
   {times: 1000, interval: 1000},
   function(callback) {
